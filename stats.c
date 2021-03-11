@@ -9,13 +9,16 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.hc
+ * @brief Implementation file of week 1 programming assignment
  *
- * <Add Extended Description Here>
+ * A simple application that performs statistical analytics on a dataset. This 
+ * programs consists a couple of functions that can analyze an arrat of unsigned 
+ * char data items anf report analytics on the maximum, minimun, mean, and median 
+ * of dataset.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author KaiShengChoi (Derrick)
+ * @date 11 March 2021
  *
  */
 
