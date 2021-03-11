@@ -62,6 +62,8 @@ void print_statistics(unsigned char* array, int length) {
   print_array(array, length);
   unsigned char median = find_median(array, length);
   printf ("Median : %d\r\n",median);
+  unsigned char mean = find_mean(array, length);
+  printf ("Mean : %d\r\n",mean);
 
 }
 
@@ -87,7 +89,11 @@ unsigned char find_median (unsigned char* array, int length) {
 }
 
 unsigned char find_mean (unsigned char* array, int length) {
+  int sum = 0;
+  for( int i = 0; i < length-1 ; i++ )
+    sum += array[i];
 
+  return (unsigned char)(sum/length);
 
 }
 
