@@ -22,13 +22,24 @@
  *
  */
 
-
-
 #include <stdio.h>
 #include "stats.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
+
+/**
+ * @brief Swaps the value between 2 variable
+ *
+ * This function takes the inputs of pointer to 2 unsigned char variable.
+ * This function Swap the value between 2  unsigned char variable.
+ *
+ * @param p pointer to the unsigned char variable
+ * @param q pointer to the unsigned char variable
+ *
+ * @return None
+ */
+void swap(unsigned char *p, unsigned char *q);
 
 void main() {
 
@@ -47,7 +58,10 @@ void main() {
 
 void print_statistics(unsigned char* array, int length) {
   
+  sort_array(array, length);
   print_array(array, length);
+  unsigned char median = find_median(array, length);
+  printf ("Median : %d\r\n",median);
 
 }
 
@@ -61,3 +75,44 @@ void print_array(unsigned char* array, int length){
 
 }
 
+unsigned char find_median (unsigned char* array, int length) {
+  
+  sort_array(array, length);
+
+  if ( length%2 == 0 )
+    return (array[(length-1)/2] + array[length/2])/2;
+  else
+    return array[length/2];
+
+}
+
+unsigned char find_mean (unsigned char* array, int length) {
+
+
+}
+
+unsigned char find_maximum (unsigned char* array, int length) {
+
+
+}
+
+unsigned char find_minimum(unsigned char* array, int length) {
+
+
+}
+
+void sort_array(unsigned char* array, int length) {
+  for( int i = 0; i < length-1 ; i++ ) {
+    for( int j = 0; j < length-i-1 ; j++ ) {
+        if ( array[j] > array[j+1] )
+          swap( &array[j], &array[j+1] );
+    }
+  }
+}
+
+void swap(unsigned char *p, unsigned char *q) {
+  unsigned char temp;
+  temp = *p; 
+  *p = *q; 
+  *q = temp;
+}
