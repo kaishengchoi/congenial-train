@@ -40,7 +40,24 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-
+  print_statistics(test, SIZE);
 }
 
 /* Add other Implementation File Code Here */
+
+void print_statistics(unsigned char* array, int length) {
+  
+  print_array(array, length);
+
+}
+
+void print_array(unsigned char* array, int length){
+  
+  for ( int i = 0 ; i < length ; i++ ) {
+    printf("index %d : %d\t", i, array[i]);
+    if ( (i+1)%8 == 0 )
+      printf("\r\n");
+  }
+
+}
+
