@@ -3,7 +3,7 @@
 
 This project is the week 1 programming assignment of an online course Introduction to Embedded Systems Software and Development Environments by University of Colorado Boulder on Coursera. 
 
-This programming assignment is about creating a simple application that performs statistical analytics on a dataset. This programs consists a couple of functions that can analyze an arrat of unsigned char data items anf report analytics on the maximum, minimun, mean, and median of dataset.
+This programming assignment is about creating a simple application that performs statistical analytics on a dataset. This programs consists a couple of functions that can analyze an arrat of unsigned char data items and report analytics on the maximum, minimun, mean, and median of dataset.
 
 ## Author
 
